@@ -290,7 +290,7 @@ bool SuperAnimData::LoadSuperAnimMainDef(const String &theSuperAnimFile)
     return true;
 }
 
-RES SuperAnimDataFormatLoader::load(const String &p_path,const String& p_original_path)
+RES SuperAnimDataFormatLoader::load(const String &p_path,const String& p_original_path, Error *p_err)
 {
     print_line("PathIs: " + p_path);
     SuperAnimData *sad = memnew(SuperAnimData);

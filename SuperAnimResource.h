@@ -9,7 +9,7 @@
 #ifndef __GodotEditing__SuperAnimData__
 #define __GodotEditing__SuperAnimData__
 
-#include "core/Resource.h"
+#include "core/resource.h"
 #include "core/io/resource_loader.h"
 #include "core/io/resource_saver.h"
 #include "SuperAnimCommon.h"
@@ -36,7 +36,7 @@ class SuperAnimDataFormatLoader : public ResourceFormatLoader{
 public:
     //This function is called by godot to load the resources which are handled by this loader.
     //if a resource is already loaded once, this function is not called again.
-    virtual RES load(const String &p_path,const String& p_original_path="");
+    virtual RES load(const String &p_path,const String& p_original_path="", Error *p_err=NULL);
 
     //this function specifies which file extensions this loader can load.
 	virtual void get_recognized_extensions(List<String> *p_extensions) const;
